@@ -81,7 +81,7 @@ body {
 }
 
 /* ===== MEDIA QUERIES ===== */
-@media screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   body{
         margin: 0;
     }

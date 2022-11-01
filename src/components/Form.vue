@@ -1,10 +1,11 @@
 <template>
-    <form  @submit.prevent="FormHandler">
+    <form  class="container" @submit.prevent="FormHandler">
       <input type="text" placeholder="收入名稱" v-model="formData.desc" />
       <input type="number" placeholder="金額" v-model="formData.value" />
-      <input type="date" placeholder="Income Date..." v-model="formData.date" />
+      <input type="date" placeholder="日期" v-model="formData.date" />
       <input type="submit" value="提交" />
     </form>
+
   </template>
   
   <script>
@@ -40,23 +41,29 @@
   </script>
   
   <style scoped>
+    .container{
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+
     form {
       display: flex;
       justify-content: center;
-      margin-top: 30px;
-      margin-left: 10px;
-      margin-right: 10px;
+       margin-top: 30px;
+      
     }
     form input {
       color: #888;
       border: none;
       outline: none;
-      font-size: 20px;
-      width: 160px;
+      font-size: 15px;
+      width: 110px;
     }
+   
     form input::placeholder {
       color: #AAA;
-      font-size: 150;
+      font-size: 25;
     }
     form input:not([type="submit"]) {
       display: block;
@@ -71,8 +78,9 @@
       border: none;
       outline: none;
       color: #FFF;
+      font-size: 15px;
       font-weight: 400;
-      text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+      text-shadow: 0px 1px 3px rgba(0, 0, 1, 0.2);
       padding: 5px 15px;
       background-color:  #787878;
       cursor: pointer;
@@ -85,11 +93,24 @@
     }
 
     @media screen and (max-width: 768px) {
-      form {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-      max-width: 100%;    }
+      
+      .container{
+        max-width: 100%;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+        .form input {
+      color: #888;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      width: 100px;
+    
+    }
+      
+      
+     
+    
   
     }
   </style>

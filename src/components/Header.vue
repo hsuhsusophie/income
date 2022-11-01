@@ -40,4 +40,11 @@
     box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
     text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
   }
+
+
+  @media screen and (max-width: 768px) {
+  header{
+    width:100% ;
+  }  
+}
   </style>
